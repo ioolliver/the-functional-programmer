@@ -1,0 +1,16 @@
+---
+interface Props {
+    url: string;
+    alternativeText: string;
+    iconCode: string;
+}
+
+const { url, alternativeText, iconCode } = Astro.props;
+---
+
+<a href={url} target="_blank">
+    <span class="sr-only">{alternativeText}</span>
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 16 16">
+        <path fill="currentColor" d={iconCode}></path>
+    </svg>
+</a>
