@@ -1,13 +1,10 @@
 ---
 import {
     SITE_TITLE,
-    LINKEDIN_URL,
-    GITHUB_URL,
-    LINKEDIN_SVG_ICON,
-    GITHUB_SVG_ICON,
 } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
-import SocialLink from "./SocialLink.astro";
+import Linkedin from "./social/Linkedin.astro";
+import Github from "./social/Github.astro";
 ---
 
 <header class="m-0 px-3 pt-2 md:px-6 bg-white drop-shadow-black">
@@ -18,16 +15,8 @@ import SocialLink from "./SocialLink.astro";
             <HeaderLink href="/blog">Blog</HeaderLink>
         </div>
         <div class="hidden md:flex gap-4">
-            <SocialLink
-                url={LINKEDIN_URL}
-                alternativeText="Connect with me on Linkedin"
-                iconCode={LINKEDIN_SVG_ICON}
-            />
-            <SocialLink
-                url={GITHUB_URL}
-                alternativeText="Check out my projets on GitHub"
-                iconCode={GITHUB_SVG_ICON}
-            />
+            <Linkedin />
+            <Github />
         </div>
     </nav>
 </header>
