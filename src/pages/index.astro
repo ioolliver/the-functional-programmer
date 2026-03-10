@@ -3,7 +3,8 @@ import "../layouts/Layout.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { SITE_DESCRIPTION, SITE_TITLE, LINKEDIN_URL, GITHUB_URL } from "../consts";
+import profileImage from "../assets/blog-placeholder-about.jpg";
 ---
 
 <!doctype html>
@@ -13,11 +14,31 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     </head>
     <body>
         <Header />
-        <main>
-            <div class="text-2xl font-bold">
-                <h2>Welcome to</h2>
-                <h1 class="text-4xl">The Functional Programmer</h1>
-                <h2>I'm Isaque Nascimento</h2>
+        <main class="max-w-3xl mx-auto px-6 py-16">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="shrink-0">
+                    <img
+                        src={profileImage.src}
+                        alt="Isaque Nascimento"
+                        class="w-52 h-52 rounded-full object-cover border-4 border-gray-light"
+                    />
+                </div>
+                <div class="space-y-5">
+                    <h1 class="text-3xl font-bold">Welcome to The Functional Programmer</h1>
+
+                    <p class="text-lg leading-relaxed">
+                        I'm doing AI Research in Data Augmentation focused on improving the Text-to-SQL task.
+                    </p>
+
+                    <p class="text-lg leading-relaxed">
+                        I care about craft, functional programming, and building things that last.
+                        I write occasionally here on topics around software engineering and computer science.
+                    </p>
+
+                    <p class="text-lg leading-relaxed">
+                        Feel free to <a href={LINKEDIN_URL} target="_blank" class="text-green-700 underline hover:text-green-900">reach out</a> if you'd like to talk.
+                    </p>
+                </div>
             </div>
         </main>
         <Footer />

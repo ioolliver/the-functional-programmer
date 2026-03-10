@@ -1,13 +1,14 @@
 ---
-import Github from "./social/Github.astro";
-import Linkedin from "./social/Linkedin.astro";
-const today = new Date();
+import { LINKEDIN_URL, GITHUB_URL } from "../consts";
 ---
 
-<footer class="bg-gray-200 text-gray pt-8 px-1 pb-6 text-center">
-    &copy; {today.getFullYear()} Isaque Nascimento. All rights reserved.
-    <div class="flex justify-center gap-4 mt-4">
-        <Linkedin />
-        <Github />
+<footer class="max-w-3xl mx-auto px-6 py-8 border-t border-gray-light">
+    <div class="flex justify-between items-center text-sm text-gray">
+        <span>Isaque Nascimento</span>
+        <div class="flex gap-4">
+            <a href={LINKEDIN_URL} target="_blank" class="hover:text-gray-dark transition-colors">LinkedIn</a>
+            <span>|</span>
+            <a href={GITHUB_URL} target="_blank" class="hover:text-gray-dark transition-colors">GitHub</a>
+        </div>
     </div>
 </footer>

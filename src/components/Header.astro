@@ -1,22 +1,10 @@
 ---
-import {
-    SITE_TITLE,
-} from "../consts";
 import HeaderLink from "./HeaderLink.astro";
-import Linkedin from "./social/Linkedin.astro";
-import Github from "./social/Github.astro";
 ---
 
-<header class="m-0 px-3 pt-2 md:px-6 bg-white drop-shadow-black">
-    <nav class="flex justify-between items-center">
-        <h2 class="font-bold text-2xl"><a href="/">{SITE_TITLE}</a></h2>
-        <div class="flex gap-4 text-xl">
-            <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
-        </div>
-        <div class="hidden md:flex gap-4">
-            <Linkedin />
-            <Github />
-        </div>
+<header class="max-w-3xl mx-auto px-6 pt-8 pb-4">
+    <nav class="flex gap-6 items-center text-base">
+        <HeaderLink href="/">home</HeaderLink>
+        <HeaderLink href="/blog">blog</HeaderLink>
     </nav>
 </header>
